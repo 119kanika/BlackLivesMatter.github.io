@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+#cover{
+    display: flex;
+    flex-direction: column;
+    /* padding: 100px; */
+    /* height:590px; */
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    position: relative;
+    margin: 20px 20px 0 0;
+    padding: 23px;
+    font-size: 4.4rem;
+    font-weight: 900;
+    color: black;
+    text-shadow: 2px 2px 8px rgb(145, 128, 32);
+    z-index: 2;
+    /* opacity: 1.5; */
+    overflow: hidden;
+}
+
+h2::before{
+    content: '';
+    position: absolute;
+    left: -20;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 5%, rgb(0, 0, 0) 100%);
+    animation: animate 5.7s linear forwards;
+    /* animation-delay: 2s; */
+}
+
+#btn {
+    position: absolute;
+    margin: 130px -100px; //0px 150px ;
+    padding: 10px;
+    text-decoration: none;
+    border: 5px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    color: yellow;
+    background-color: black;
+}    
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+@keyframes animate{
+   0%{
+        left: -20%;
+    }
+    100%{
+        left: 110%;
+    } 
